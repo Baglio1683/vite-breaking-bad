@@ -30,6 +30,17 @@ data(){
 
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss" scoped> 
+    
+    .col_5{
+      font-size: small;
+      background-color:  #2E3A46;
+      color: white;
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+  
 
 </style>

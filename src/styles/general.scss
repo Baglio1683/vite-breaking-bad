@@ -12,6 +12,10 @@
     align-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: white;
 }
 
 
@@ -20,6 +24,8 @@
 }
 
 .col_5{
+    margin-left: 10px;
+    margin-bottom: 10px;
     width: calc(100% / 5 - 10px);
 }
 
