@@ -14,11 +14,6 @@
     flex-wrap: wrap;
 }
 
-.row{
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-}
 
 .col_12{
     width: 100%;
@@ -26,4 +21,8 @@
 
 .col_5{
     width: calc(100% / 5 - 10px);
+}
+
+img{
+    max-width: 100%;
 }

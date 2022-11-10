@@ -3,6 +3,7 @@ import axios from "axios";
 import AppHeader from "./components/AppHeader.vue"
 import AppCardList from "./components/AppCardList.vue"
 import AppSingleCard from "./components/AppSingleCard.vue"
+import AppLoad from "./components/AppLoad.vue"
 import { store } from "./store";
 
 
@@ -12,7 +13,8 @@ export default{
 components: {
   AppHeader,
   AppCardList, 
-  AppSingleCard
+  AppSingleCard, 
+  AppLoad
 },
 
 data(){
@@ -23,9 +25,12 @@ data(){
 }, 
 
 created(){
-   
+
+      this.store.loading = true;
       axios.get("https://www.breakingbadapi.com/api/characters").then((resp) => {
-      this.store.characters = resp.data.results;
+      this.store.characters = resp.data;
+      console.log(this.store.characters);
+      this.store.loading = false;
 
     });
 

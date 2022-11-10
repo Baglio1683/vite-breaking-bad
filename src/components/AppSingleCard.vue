@@ -8,7 +8,7 @@ export default{
 </script>
 
 <template>
-            <img class="" :src="character.image" alt="">
+            <img class="" :src="character.img" alt="">
             <h3>{{ character.name }}</h3>
 </template>
 

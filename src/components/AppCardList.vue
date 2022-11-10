@@ -22,11 +22,9 @@ data(){
 
     <div class="container">
       
-        <div class="row">
           <div class="col_5" v-for="character in store.characters">
             <AppSingleCard :character="character"/>
           </div>  
-       </div>
     </div>
 
 
