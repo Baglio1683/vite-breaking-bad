@@ -1,13 +1,15 @@
 <script>
+import { store } from "../store";
 
 export default {
     name: "AppHeader",
 
     data(){
       return{
+        store,
         selected : "", 
       }
-    }
+    }, 
 }
 
 </script>
@@ -27,6 +29,7 @@ export default {
         <option value="3">All categories</option>
       </select>
       <button @click="$emit('search',selected)">Start</button>
+      <p>Il numero degli attori è : {{store.characters.length}} </p>
     </div>
 
 </template>
