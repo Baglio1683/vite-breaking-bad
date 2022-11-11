@@ -21,7 +21,6 @@ data(){
 <template>
 
     <div class="container">
-      
           <div class="col_5" v-for="character in store.characters">
             <AppSingleCard :character="character"/>
           </div>  

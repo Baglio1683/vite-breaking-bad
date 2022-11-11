@@ -24,27 +24,49 @@ data(){
   }
 }, 
 
-created(){
+methods: {
+  searchActors(numberOfActor){
+
+    if(numberOfActor == 2){
+      this.store.loading = true;
+      axios.get("https://www.breakingbadapi.com/api/characters?category=Better+Call+Saul").then((resp) => {
+      this.store.characters = resp.data;
+      this.store.loading = false;
+      });
+    }
+
+    if(numberOfActor == 1){
+      this.store.loading = true;
+      axios.get("https://www.breakingbadapi.com/api/characters?category=Breaking+Bad").then((resp) => {
+      this.store.characters = resp.data;
+      this.store.loading = false;
+    
+    }); 
+     }
+    
+    if(numberOfActor ==3){
 
       this.store.loading = true;
       axios.get("https://www.breakingbadapi.com/api/characters").then((resp) => {
       this.store.characters = resp.data;
-      console.log(this.store.characters);
       this.store.loading = false;
+    
+    }); 
 
-    });
-
-
-}, 
+    }
+  }
 
 }
+
+}
+
 
 </script>
 
 <template>
 
 <body>
-  <AppHeader /> 
+  <AppHeader @search="searchActors" />
   <AppCardList /> 
 </body>
 

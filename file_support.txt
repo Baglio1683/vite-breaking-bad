@@ -1,0 +1,9 @@
+created(){
+
+      this.store.loading = true;
+      axios.get("https://www.breakingbadapi.com/api/characters?category=Better+Call+Saul").then((resp) => {
+      this.store.characters = resp.data;
+      console.log(this.store.characters);
+      this.store.loading = false;
+
+    });

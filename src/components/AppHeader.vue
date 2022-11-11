@@ -1,7 +1,13 @@
 <script>
 
 export default {
-    name: "AppHeader"
+    name: "AppHeader",
+
+    data(){
+      return{
+        selected : "", 
+      }
+    }
 }
 
 </script>
@@ -14,11 +20,13 @@ export default {
 
     <div class="container">
 
-      <select>
-        <option value="0">Select category</option>
-        <option value="1">option 1</option>
+      <select v-model="selected">
+        <option disabled value="">Select category</option>
+        <option value="1">Breaking Bad</option>
+        <option value="2">Better Call Saul</option>
+        <option value="3">All categories</option>
       </select>
-
+      <button @click="$emit('search',selected)">Start</button>
     </div>
 
 </template>
